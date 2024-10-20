@@ -35,9 +35,10 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="July 2024 - Present"
               description={[
-                "Designed predictive Physics-Informed Neural Network models for drain and gate current of GaAs pHEMT devices, and developed PyTorch to Verilog-A transpiler for deployment in Cadence and ADS simulators",
-                "Created CLI to manage data, provision compute, create project templates, and monitor training jobs within the modeling group",
-                "Built an internal RF switch design math package, deployed behind a RESTful API and Next dashboard, and as a standalone pip package. Automated test, build, and deployment workflows using Azure DevOps"
+                "Created CLI to interface with on-prem HPC cluster and file system for training, boot standardized project templates and environments with Apptainer, and manage and monitor experiments",
+                "Developed PyTorch-to-Verilog-A transpiler to deploy DL models into Cadence and ADS simulators",
+                "Designed physics-informed neural network of GaAs pHEMT devices, enabling more precise bias point selection for intermodulation distortion suppression",
+                "Built an internal RF switch design math package, deployed behind a RESTful API and Next dashboard,  and as a standalone pip package; automated test, build, and deployment workflows on Azure DevOps"
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/skyworkslogo.png"
               websiteUrl="https://www.skyworksinc.com/"

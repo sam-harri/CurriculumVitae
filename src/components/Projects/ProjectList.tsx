@@ -30,7 +30,7 @@ const ProjectList: React.FC = () => {
             listItems={[
               "Built an end-to-end data pipeline for real-time streaming, processing, and storing chemical process data",
               "Developed a Rust service for data generation, Kafka Raft with Schema Registry for streaming, Spark for anomaly detection, and TimescaleDB for storage",
-              "Orchestrated multi-container services using Docker and Compose, with Prometheus and Grafana for real-time monitoring and visualization"
+              "Orchestrated multi-container services with Docker and Compose, used Prometheus and Grafana for real-time monitoring and visualization"
             ]}
           />
 
