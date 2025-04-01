@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
             {/* Neon Experience (First) */}
             <ExperienceCard
               first
-              title="Software Engineer, Contractor"
+              title="Software Engineer"
               company="Neon"
               location="Ottawa, ON"
               dateRange="Present"
@@ -35,10 +35,9 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="July 2024 - Present"
               description={[
-                "Created CLI to interface with on-prem HPC cluster and file system for training, boot standardized project templates and environments with Apptainer, and manage and monitor experiments",
-                "Developed PyTorch-to-Verilog-A transpiler to deploy DL models into Cadence and ADS simulators",
-                "Designed physics-informed neural network of GaAs pHEMT devices, enabling more precise bias point selection for intermodulation distortion suppression",
-                "Built an internal RF switch design math package, deployed behind a RESTful API and Next dashboard,  and as a standalone pip package; automated test, build, and deployment workflows on Azure DevOps"
+                "Designed physics-informed neural network of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
+                "Developed PyTorch-to-Verilog-A transpiler to deploy deep learning models into Cadence and Keysight simulators",
+                "Created a CLI for on-prem HPC management that simplified ML workflows through templated resource allocation, automated storage mounting, containerized Apptainer environments, and experiment monitoring",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/skyworkslogo.png"
               websiteUrl="https://www.skyworksinc.com/"
@@ -51,10 +50,9 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="August 2023 – January 2024"
               description={[
-                "Developed and deployed various machine learning and deep learning models to tackle state estimation of Li-Ion batteries during drive cycles",
-                "Deployed models with FastAPI and Redis for data buffering using a CI pipeline with automated unit testing and deployment workflows",
-                "Created Electrochemical Impedance Spectroscopy dashboard in React and accompanying REST API to standardize data acquisition for all platforms and allow researchers to access, plot, compare and share battery cycling results across teams",
-                "Integrated API calls into existing EIS platforms for transmission of sweep conditions and impedance results into MongoDB"
+                "Developed recurrent deep learning models for state estimation of Li-Ion batteries during drive cycles, achieving a 4% accuracy improvement over previous approaches by utilizing using memory effects ",
+                "Architected a real-time inference system using FastAPI and Redis, implementing a pub/sub pattern for battery telemetry data that enabled low-latency state predictions during active charging cycles for 1000's of batteries",
+                "Consolidated disparate battery data from multiple charging platforms into a central MongoDB database, and developed a React based web platform for analysis of battery cycling and EIS results",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/gbatterieslogo.png"
               websiteUrl="https://www.gbatteries.com/"
@@ -70,7 +68,6 @@ const Experience: React.FC = () => {
               description={[
                 "Developed an automated review system for the National Project Management System to provide early warnings for projects at risk of exceeding time, budget, or scope constraints, reducing quarterly review exercise timeline from over 60 hours to approximately 5 minutes",
                 "Created a comprehensive dashboard to visualize project data, highlighting trends across projects, regions, and project managers",
-                "Worked extensively with large, complex datasets in the project management and financial industry"
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/pspclogo.png"
               websiteUrl="https://www.canada.ca/en/public-services-procurement.html"

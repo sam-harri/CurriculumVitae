@@ -53,24 +53,26 @@ const Landing: React.FC = () => {
           <p className="text-sm sm:text-base md:text-lg mt-2 font-light ">
             5th year double major in Computing Technology and Chemical
             Engineering at the University of Ottawa with an interest in applied
-            machine learning, performance-critical application development, and
-            Rust. I've acquired industry experience in developing
-            data-intensive applications, creating and deploying ML/DL models,
-            and building robust data pipelines for real-time processing and
-            streaming.
+            machine learning, real-time systems, and Rust. In the fall, I will be
+            beginning a Master's in Computer Science at the University of Toronto with a 
+            focus on distributed systems, cloud computing, and database management systems.
           </p>
           <div className="flex flex-wrap mt-8">
             <div className="w-full md:w-1/2 pr-5 mb-4">
               <h3 className="text-lg md:text-xl font-light">Education</h3>
               <ul className="list-none mt-2 space-y-2">
+              <li className="text-xs md:text-sm">
+                  <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> (Incoming) MScAC in Computer Science
+                  <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">University of Toronto</p>
+                </li>
                 <li className="text-xs md:text-sm">
-                  <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BSc. in Computing
+                  <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BSc in Computing
                   Technology, 2020 - 2025
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">University of Ottawa</p>
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 9.8 / 10.0</p>
                 </li>
                 <li className="text-xs md:text-sm">
-                  <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BASc. in Chemical
+                  <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BASc in Chemical
                   Engineering, 2020 - 2025
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">University of Ottawa</p>
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 9.1 / 10.0</p>
