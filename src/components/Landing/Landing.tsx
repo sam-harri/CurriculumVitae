@@ -13,10 +13,12 @@ const Landing: React.FC = () => {
             className="w-64 h-64 object-cover rounded-full mx-auto"
           />
           <h1 className="mt-2 text-3xl font-light">Sam Harrison</h1>
-          <p className="text-gray-500 text-lg font-light">
-            Computing Technology & Chemical Engineering Student
+          <p className="text-gray-500 text-md font-light">
+            CS + ChemEng, uOttawa
             <br />
-            University of Ottawa
+            Incoming MScAC, UofT
+            <br />
+            SWE, Neon.tech
           </p>
           <div className="mt-4">
             <a href="https://github.com/sam-harri" className="text-2xl mx-2 text-gray-600 hover:text-gray-600">
