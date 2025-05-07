@@ -28,14 +28,14 @@ const Landing: React.FC = () => {
             >
               <i className="fab fa-linkedin hover:scale-110"></i>
             </a>
-            <a
+            {/* <a
               href="/CV-SamuelHarrison.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl mx-2 text-gray-600 hover:text-gray-600"
             >
               <i className="ai ai-cv hover:scale-110"></i>
-            </a>
+            </a> */}
             <a
               href="mailto:sharr125@uottawa.ca"
               target="_blank"
@@ -69,13 +69,13 @@ const Landing: React.FC = () => {
                   <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BSc in Computing
                   Technology, 2020 - 2025
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">University of Ottawa</p>
-                  <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 9.8 / 10.0</p>
+                  <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 3.99 / 4.00</p>
                 </li>
                 <li className="text-xs md:text-sm">
                   <i className="fas fa-graduation-cap text-gray-600 hover:text-gray-600"></i> BASc in Chemical
                   Engineering, 2020 - 2025
                   <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">University of Ottawa</p>
-                  <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 9.1 / 10.0</p>
+                  <p className="text-xs md:text-sm text-gray-600 pl-7 font-light">GPA: 3.93 / 4.00</p>
                 </li>
               </ul>
             </div>

@@ -20,12 +20,6 @@ const Skills: React.FC = () => {
               },
               {
                 iconSrc:
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
-                iconAlt: "Go Logo",
-                name: "Go",
-              },
-              {
-                iconSrc:
                   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
                 iconAlt: "Rust Logo",
                 name: "Rust",
@@ -36,6 +30,12 @@ const Skills: React.FC = () => {
                 iconAlt: "Typescript Logo",
                 name: "Typescript",
               },
+              // {
+              //   iconSrc:
+              //     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+              //   iconAlt: "Go Logo",
+              //   name: "Go",
+              // },
             ]}
           />
           <SkillGroup

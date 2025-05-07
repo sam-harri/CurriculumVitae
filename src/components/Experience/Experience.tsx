@@ -21,8 +21,8 @@ const Experience: React.FC = () => {
               first
               title="Software Engineer"
               company="Neon"
-              location="Ottawa, ON"
-              dateRange="Present"
+              location="San Francisco, CA (Remote from Canada)"
+              dateRange="November 2024 - Present"
               description={[]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/neonlogo.png"
               websiteUrl="http://neon.tech/home"
@@ -33,10 +33,10 @@ const Experience: React.FC = () => {
               title="Machine Learning Engineer II, III-V Modeling Group"
               company="Skyworks Solutions Inc."
               location="Ottawa, ON"
-              dateRange="July 2024 - Present"
+              dateRange="July 2024 - November 2024"
               description={[
-                "Designed physics-informed neural network of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
-                "Developed PyTorch-to-Verilog-A transpiler to deploy deep learning models into Cadence and Keysight simulators",
+                "Designed and iterated on physics-informed neural networks of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
+                "Developed PyTorch-to-Verilog-A transpiler to deploy deep learning models into Cadence and Keysight simulators, allowing designers to optimize device performance",
                 "Created a CLI for on-prem HPC management that simplified ML workflows through templated resource allocation, automated storage mounting, containerized Apptainer environments, and experiment monitoring",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/skyworkslogo.png"
@@ -48,10 +48,10 @@ const Experience: React.FC = () => {
               title="Algorithm Developer Intern, R&D Division"
               company="GBatteries"
               location="Ottawa, ON"
-              dateRange="August 2023 – January 2024"
+              dateRange="August 2023 - January 2024"
               description={[
-                "Developed recurrent deep learning models for state estimation of Li-Ion batteries during drive cycles, achieving a 4% accuracy improvement over previous approaches by utilizing using memory effects ",
-                "Architected a real-time inference system using FastAPI and Redis, implementing a pub/sub pattern for battery telemetry data that enabled low-latency state predictions during active charging cycles for 1000's of batteries",
+                "Developed recurrent deep learning models for state estimation of Li-Ion batteries during drive cycles, achieving a 4% accuracy improvement over previous approaches by utilizing using memory effects",
+                "Created a real-time inference system using FastAPI and Redis telemetry data buffering, delivering low-latency state predictions during active charging cycles for thousands of batteries",
                 "Consolidated disparate battery data from multiple charging platforms into a central MongoDB database, and developed a React based web platform for analysis of battery cycling and EIS results",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/gbatterieslogo.png"
@@ -64,9 +64,9 @@ const Experience: React.FC = () => {
               title="Junior Data Scientist, National Project Oversight Branch"
               company="Public Services and Procurement Canada"
               location="Quebec, QC"
-              dateRange="April 2022 – September 2022"
+              dateRange="April 2022 - September 2022"
               description={[
-                "Developed an automated review system for the National Project Management System to provide early warnings for projects at risk of exceeding time, budget, or scope constraints, reducing quarterly review exercise timeline from over 60 hours to approximately 5 minutes",
+                "Developed an automated review system for the National Project Management System to provide early warnings for projects at risk of exceeding time, budget, or scope constraints, reducing the quarterly review timeline from over 60 hours to approximately 5 minutes",
                 "Created a comprehensive dashboard to visualize project data, highlighting trends across projects, regions, and project managers",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/pspclogo.png"
