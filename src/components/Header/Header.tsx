@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           {/* Flex container for name and links */}
           <div className="flex items-center space-x-8">
             {/* Name section */}
-            <a className="font-bold text-xl" href="/">Sam Harrison</a>
+            <a className="font-bold text-xl hover:no-underline text-gray-800 hover:text-gray-800" href="/">Sam Harrison</a>
 
             {/* Desktop navigation links (left-aligned) */}
             <div className="hidden lg:flex" id="navbarNav">

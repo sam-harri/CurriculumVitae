@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="July 2024 - November 2024"
               description={[
-                "Designed and iterated on physics-informed neural networks of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
+                "Designed physics-informed neural networks of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
                 "Developed PyTorch-to-Verilog-A transpiler to deploy deep learning models into Cadence and Keysight simulators, allowing designers to optimize device performance",
                 "Created a CLI for on-prem HPC management that simplified ML workflows through templated resource allocation, automated storage mounting, containerized Apptainer environments, and experiment monitoring",
               ]}

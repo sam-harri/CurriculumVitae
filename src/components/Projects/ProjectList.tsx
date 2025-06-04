@@ -10,12 +10,23 @@ const ProjectList: React.FC = () => {
         </div>
         {/* Add justify-center to center items when there's only one column */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto justify-center">
+
+          {/* Uranium Milling Plant Project */}
+          <ProjectItem
+            title="FLood2"
+            description="Novel Vortex Flood Fill Algorithm for Turbulence Characterization"
+            reportUrl="/FLood2.pdf"
+            listItems={[
+              "Developed FLood2, a highly parallel turbulence characterization algorithm based on the Lambda-2 criterion, applied to DNS results from Nektar++ using the spectral/hp element method",
+              "Implemented in C++11 with MPI and mesh partitioning, designed for execution on HPC clusters",
+            ]}
+          />
+
           {/* TensorCraft Project */}
           <ProjectItem
             title="TensorCraft"
             description="Drag-and-Drop Neural Network Builder"
             websiteUrl="https://tensorcraft.click"
-            githubUrl="https://github.com/sam-harri/TensorCraft"
             listItems={[
               "Allows users to easily build neural networks by dragging, connecting, and defining layers in an interactive playground",
               "Provides real-time feedback on tensor shapes and generates PyTorch code instantly",
@@ -24,28 +35,15 @@ const ProjectList: React.FC = () => {
           />
 
           <ProjectItem
-            title="ProcessDataStreaming"
-            description="Real-Time Chemical Process Data Pipeline"
-            githubUrl="https://github.com/sam-harri/ProcessDataStreaming"
-            listItems={[
-              "Built an end-to-end data pipeline for real-time streaming, processing, and storing chemical process data",
-              "Developed a Rust service for data generation, Kafka Raft with Schema Registry for streaming, Spark for anomaly detection, and TimescaleDB for storage",
-              "Orchestrated multi-container services with Docker and Compose, used Prometheus and Grafana for real-time monitoring and visualization"
-            ]}
-          />
-
-
-          <ProjectItem
             title="GaussianPI"
             description="ML Based Process Control PI Tuner"
             githubUrl="https://github.com/sam-harri/GaussianPI"
             listItems={[
               "Tuned control loop constants using Gaussian Processes and Bayesian Optimization",
               "Developed a MATLAB simulation of the process to test sampled controller configurations, interfaced via Python's matlabengine",
-              "Applied distributed computing to overcome near-real-time simulation constraints."
+              "Distributed simulations over 12+ nodes to overcome near-real-time simulation constraints."
             ]}
           />
-
 
           {/* Uranium Milling Plant Project */}
           <ProjectItem
@@ -61,18 +59,6 @@ const ProjectList: React.FC = () => {
             ]}
           />
 
-          {/* Boxing Club Website Project */}
-          <ProjectItem
-            title="University of Ottawa Boxing Club Website"
-            description="Website for the boxing club to manage registrations"
-            websiteUrl="https://sam-harri.github.io/uOBC/"
-            githubUrl="https://github.com/sam-harri/uOBC"
-            listItems={[
-              "Developed a website using Next.js, Tailwind, and Framer Motion",
-              "Implemented enrollment and waitlisting functionalities",
-              "Created automated email systems for registrations/unregistrations",
-            ]}
-          />
         </div>
       </div>
     </div>
