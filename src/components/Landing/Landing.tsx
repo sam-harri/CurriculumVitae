@@ -51,10 +51,8 @@ const Landing: React.FC = () => {
         <div className="w-full md:w-2/3 lg:w-3/4 flex-grow">
           <h2 className="text-xl md:text-2xl font-light">Biography</h2>
           <p className="text-sm sm:text-base md:text-lg mt-2 font-light ">
-            Recent double major graduate from the University of Ottawa with an interest in applied
-            machine learning, real-time systems, and Rust. In the fall, I will be
-            beginning a Master's in Computer Science at the University of Toronto with a 
-            focus on distributed systems and database management systems.
+            MScAC, Computer Science student at the University of Toronto with a focus on distributed systems and database management systems. I'm interested in anything Rust, real-time systems, and applied machine learning. 
+            Right now I'm working at Neon Database, which recently got aquired by Databricks. Outside of work, I'm an avid powerlifter and boxer.
           </p>
           <div className="flex flex-wrap mt-8">
             <div className="w-full md:w-1/2 pr-5 mb-4">

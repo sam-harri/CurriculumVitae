@@ -35,9 +35,9 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="July 2024 - November 2024"
               description={[
-                "Designed physics-informed neural networks of GaAs pHEMT devices, improving bias point selection accuracy for intermodulation distortion suppression",
-                "Developed PyTorch-to-Verilog-A transpiler to deploy deep learning models into Cadence and Keysight simulators, allowing designers to optimize device performance",
-                "Created a CLI for on-prem HPC management that simplified ML workflows through templated resource allocation, automated storage mounting, containerized Apptainer environments, and experiment monitoring",
+                "Developed PINNs of GaAs pHEMT devices, improved bias point selection accuracy to suppress intermodulation distortion and reduced simulation wall times",
+                "Implemented a PyTorch-to-Verilog-A transpiler that converts trained neural networks into Verilog-A modules, allowingdevice teams to drop deep learning models straight into Cadence and Keysight simulators",
+                "Created a CLI for HPC management that simplified ML workflows through templated resource allocation, automated storage mounting, containerized Apptainer environments, and experiment monitoring",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/skyworkslogo.png"
               websiteUrl="https://www.skyworksinc.com/"
@@ -50,8 +50,8 @@ const Experience: React.FC = () => {
               location="Ottawa, ON"
               dateRange="August 2023 - January 2024"
               description={[
-                "Developed recurrent deep learning models for state estimation of Li-Ion batteries during drive cycles, achieving a 4% accuracy improvement over previous approaches by utilizing using memory effects",
-                "Created a real-time inference system using FastAPI and Redis telemetry data buffering, delivering low-latency state predictions during active charging cycles for thousands of batteries",
+                "Developed CNN-LSTM and LightGBM models for Li-Ion battery state estimation, improved accuracy by 4% and enabled efficient inference on resource-constrained devices",
+                "Created a real-time inference system using FastAPI and Redis telemetry data buffering, capable of delivering low-latency state predictions during active charging cycles for thousands of batteries",
                 "Consolidated disparate battery data from multiple charging platforms into a central MongoDB database, and developed a React based web platform for analysis of battery cycling and EIS results",
               ]}
               logoUrl="https://samharrison-portfolio.s3.us-east-2.amazonaws.com/gbatterieslogo.png"
