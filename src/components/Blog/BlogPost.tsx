@@ -36,7 +36,7 @@ const BlogPost = () => {
   }
 
   const imageName = post.image.split('/').pop()?.replace('.png', '') || slug;
-  const ogImage = `/posts/images/${imageName}.png`;
+  const ogImage = `https://samharrison.ca/posts/images/${imageName}.png`;
 
   const components = {
     code({ node, inline, className, children, ...props }: any) {
@@ -72,6 +72,7 @@ const BlogPost = () => {
           <Helmet>
             <title>{post.title}</title>
             <meta name="description" content={post.subtitle} />
+            <link rel="canonical" href={`https://samharrison.ca/blog/${slug}`} />
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.subtitle} />
             <meta property="og:image" content={ogImage} />
@@ -81,6 +82,8 @@ const BlogPost = () => {
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             <meta property="og:image:alt" content={`${post.title} - ${post.subtitle}`} />
+            <meta property="article:published_time" content={post.date} />
+            <meta property="article:author" content="Sam Harrison" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.subtitle} />
