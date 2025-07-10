@@ -1,15 +1,15 @@
 # Less Booleans
 
-Booleans are a natural fit for binary states. However, a state that appears binary today may not be tomorrow. When a third option becomes necessary, an initial `bool` in a public API creates a difficult choice:
+Booleans are a natural fit for binary states. However, a state that appears binary today may not be tomorrow. When a third option becomes necessary, a `bool` in a public API creates a difficult choice:
 
 1.  **A Breaking Change:** Replace the `bool` with a more flexible type, forcing all consumers to update their code.
-2.  **Boolean Creep:** Add a second `bool`, leading to a combinatorial explosion of states, some of which may be invalid.
+2.  **Boolean Creep:** Add a second `bool`, leading to a product wise increase of states, some of which may be invalid.
 
 Using more descriptive types from the start can create APIs that are more robust, self-documenting, and easier to evolve.
 
 ## The Problem: An Evolving User Status
 
-Consider a function that needs a user's status. Initially, a user can only be `active` or `inactive`. A boolean seems sufficient.
+Consider a function that needs a user's status. Initially, a user can only be `active` or `inactive`. A boolean seems perfect.
 
 ```python
 def something_user_status(user_id: int, is_active: bool) -> None:
@@ -52,7 +52,7 @@ This is especially nice as it keep everything neatly tied in the function signat
 
 ### 3. Union of Dataclasses (poor mans ADT)
 
-When different states must carry different data, a union of dataclasses is an a very strong pattern. It emulates the algebraic data types (ADTs) found in other languages, like Rust (so it has to be good).
+When different states must carry different data, a union of dataclasses is great. It emulates the algebraic data types (ADTs) found in other languages, like Rust (so it has to be good).
 
 For our `UserStatus` example, an `Inactive` state might need a `last_seen` timestamp, while an `Away` state could have a custom message.
 
@@ -91,4 +91,4 @@ handle_status(Away(message="On lunch"))
 
 ## Conclusion
 
-Overusing booleans for state management can lead to brittle designs that require breaking changes or runtime validation. By considering `Literal` unions, or unions of dataclasses, you can build APIs that are clearer, more robust, and prepared for future requirements. If that hanging boolean is going to be part of your public API, it might be worth spending the extra time to represent it properly.
+Overusing booleans for state management can lead to brittle designs that require breaking changes or runtime validation. By using `Literal` unions, or unions of dataclasses, you can build APIs that are clearer, more robust, and prepared for future requirements. If that hanging boolean is going to be part of your public API, it might be worth spending the extra time to represent it properly.
