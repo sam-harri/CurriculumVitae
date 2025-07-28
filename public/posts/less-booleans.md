@@ -1,13 +1,11 @@
-# Less Booleans
+# Less Booleans, More Union[dataclass]
 
-Booleans are a natural fit for binary states. However, a state that appears binary today may not be tomorrow. When a third option becomes necessary, a `bool` in a public API creates a difficult choice:
+You orginally had a binary state, and used a boolean to represent it. A third state gets added, what now?
 
-1.  **A Breaking Change:** Replace the `bool` with a more flexible type, forcing all consumers to update their code.
-2.  **Boolean Creep:** Add a second `bool`, leading to a product wise increase of states, some of which may be invalid.
+1. Break the API by changing the `bool` to something else
+2. Add another `bool`, creating invalid state combinations
 
-Using more descriptive types from the start can create APIs that are more robust, self-documenting, and easier to evolve.
-
-## The Problem: An Evolving User Status
+If you wrote your Python a bit more like Rust I'd argue this issue would have been avoided from the start, and you'd also have more robust and self documenting code.
 
 Consider a function that needs a user's status. Initially, a user can only be `active` or `inactive`. A boolean seems perfect.
 
@@ -16,7 +14,7 @@ def something_user_status(user_id: int, is_active: bool) -> None:
     # ... implementation ...
 ```
 
-Later, a new "In Meeting" status is required. Now we are at a crossroad, breaking change or another boolean? let's have a look at another boolean :
+Later, a new "In Meeting" status is required. Do you add a breaking change or another boolean? let's have a look at another boolean :
 
 ```python
 def something_user_status(user_id: int, is_active: bool, is_in_meeting: bool) -> None:
@@ -27,15 +25,15 @@ This design is flawed. It uses two variables to represent a single concept, and 
 
 ## Alternatives to Boolean Flags
 
-More expressive types can make invalid states unrepresentable. They are also more self-documenting than positional booleans. The intent of `something_user_status(123, True, False)` is unclear without inspecting the function's definition.
+More expressive types allow you to add more states as you need without brekaing changes, and can make invalid states unrepresentable. They are also nicer to read than (especially positional) booleans. The intent of `something_user_status(123, True, False)` is unclear without looking the function's definition.
 
 ### 1. `enum.Enum`
 
-For a fixed, mutually exclusive set of named options, `enum.Enum` is the standard solution. It enforces that only valid choices can be used. There are, however, better options in my opinion.
+For a fixed, mutually exclusive set of named options, `enum.Enum` is the standard solution but I think that there's better choices depending on the use case.
 
 ### 2. `typing.Literal`
 
-For simple cases where a full `Enum` class is unnecessary, `typing.Literal` allows a function to accept a specific set of string (or other literal) values.
+For simple cases, `typing.Literal` allows a function to accept a specific set of string (or other literal) values.
 
 ```python
 from typing import Literal
@@ -48,11 +46,11 @@ set_alignment("center")  # ok
 # set_alignment("middle") # static analysis error
 ```
 
-This is especially nice as it keep everything neatly tied in the function signature, and also means the user doesn't need to import the Enum.
+This is especially nice as it keep everything neatly tied in the function signature, and also means the user doesn't need to import the Enum. 
 
 ### 3. Union of Dataclasses (poor mans ADT)
 
-When different states must carry different data, a union of dataclasses is great. It emulates the algebraic data types (ADTs) found in other languages, like Rust (so it has to be good).
+When different states must carry different data, a union of dataclasses is great. It's basically a poor mans algebraic data types (ADTs).
 
 For our `UserStatus` example, an `Inactive` state might need a `last_seen` timestamp, while an `Away` state could have a custom message.
 
@@ -72,9 +70,15 @@ class Inactive:
 class Away:
     message: str
 
-# define the composite type as a union of the individual states
+# user status is a sum of the individual states
 UserStatus = Active | Inactive | Away
 
+
+```
+
+What's even better is that you can now match in these values. As Python's typing and static analysis ecosystem gets stronger, you'll be able to move more and more logic to the type system instead of runtime prayers.
+
+```python
 def handle_status(status: UserStatus):
     match status:
         case Active():
@@ -88,7 +92,3 @@ def handle_status(status: UserStatus):
 handle_status(Inactive(last_seen=datetime.now()))
 handle_status(Away(message="On lunch"))
 ```
-
-## Conclusion
-
-Overusing booleans for state management can lead to brittle designs that require breaking changes or runtime validation. By using `Literal` unions, or unions of dataclasses, you can build APIs that are clearer, more robust, and prepared for future requirements. If that hanging boolean is going to be part of your public API, it might be worth spending the extra time to represent it properly.
